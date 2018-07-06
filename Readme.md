@@ -46,5 +46,5 @@ Response
 ```
 ### Git URL
 ```
-https://github.com/karanshaha/my-statistics-app6
+https://github.com/karanshaha/my-statistics-app
 ```
