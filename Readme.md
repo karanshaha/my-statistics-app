@@ -10,7 +10,7 @@ This app calculates realtime statistic from the last 60 seconds for the transact
 - Git
 ```
 
-## Running the tests
+## Compiling project and Running the tests
 ```
 mvn clean install
 ```
@@ -46,5 +46,5 @@ Response
 ```
 ### Git URL
 ```
-ex
+https://github.com/karanshaha/my-statistics-app6
 ```
