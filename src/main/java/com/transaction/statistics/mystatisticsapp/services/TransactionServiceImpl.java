@@ -14,13 +14,13 @@ public class TransactionServiceImpl implements TransactionService {
   @Override
   public void saveTransaction(Transaction transaction) {
     Random r = new Random();
-    PersistData.getTransactionConcurrentHashMap().put(r.toString(), transaction);
+    PersistData.getInstance().transactionConcurrentHashMap.put(r.toString(), transaction);
   }
 
   @Override
   public Statistics getStatistics(Long currentEpochTime) {
 
-    Collection<Transaction> values = PersistData.getTransactionConcurrentHashMap().values();
+    Collection<Transaction> values = PersistData.getInstance().transactionConcurrentHashMap.values();
     return populateStatistics(currentEpochTime, values);
   }
 

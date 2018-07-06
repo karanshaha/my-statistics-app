@@ -25,7 +25,7 @@ public class TransactionServiceImplTest {
   @Before
   public void setUp() throws Exception {
     transactionService = new TransactionServiceImpl();
-    PersistData.getTransactionConcurrentHashMap().put("1", createTransaction());
+    PersistData.getInstance().transactionConcurrentHashMap.put("1", createTransaction());
   }
 
   @Test

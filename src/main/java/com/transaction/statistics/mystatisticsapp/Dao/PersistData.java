@@ -8,9 +8,25 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class PersistData {
 
-  static ConcurrentHashMap<String, Transaction> transactionConcurrentHashMap = new ConcurrentHashMap<>();
+  private static PersistData persistData = null;
+  public ConcurrentHashMap<String, Transaction> transactionConcurrentHashMap;
 
-  public static ConcurrentHashMap<String, Transaction> getTransactionConcurrentHashMap() {
-    return transactionConcurrentHashMap;
+  private PersistData() {
+    transactionConcurrentHashMap = new ConcurrentHashMap<>();
   }
+
+  public static PersistData getInstance() {
+    if (persistData == null) {
+      synchronized (PersistData.class) {
+        if (persistData == null) {
+          persistData = new PersistData();
+        }
+      }
+    }
+    return persistData;
+  }
+
+ /* public static ConcurrentHashMap<String, Transaction> getTransactionConcurrentHashMap() {
+    return transactionConcurrentHashMap;
+  }*/
 }
