@@ -26,7 +26,4 @@ public class PersistData {
     return persistData;
   }
 
- /* public static ConcurrentHashMap<String, Transaction> getTransactionConcurrentHashMap() {
-    return transactionConcurrentHashMap;
-  }*/
 }
